@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-primario: #8C1F28;
+    --color-secundario: #044040;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+h1>span{
+    color: #044040;
+}
+
+h1>span.cursive{
+    font-family: 'Playwrite IN', sans-serif;
+    font-size: 0.7em;
+    color: var(--color-primario);
+}
+
+h1, h2, h3{
+    color: var(--color-secundario);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    max-width: 90%;
+}
+
+.product, .user {
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 100%;
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+.product:hover, .user:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.product img, .user img {
+    max-width: 15rem;
+    max-height: 100%;
+    margin-right: 15px;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+}
+
+p>strong{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--color-primario);
+    font-size: 1.2em;
+}
+
+p.descripcion{
+    text-align: justify;
+}
+
+.stars {
+    display: inline-block;
+    direction: rtl;
+    margin-left: 10px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 1.7em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars input:hover ~ label,
+.stars label:hover ~ label {
+    color: #f5a623;
+}
