@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes y Proveedores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Clientes y Proveedores</h2>
+        <form id="registroForm">
+            <ul class="form-list">
+                <li>
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="Cliente">Cliente</option>
+                        <option value="Proveedor">Proveedor</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </li>
+                <li>
+                    <label for="identificacion">Identificación:</label>
+                    <input type="text" id="identificacion" name="identificacion" required>
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </li>
+                <li>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </li> 
+                <li>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </li>
+                <li>
+                    <button type="submit">Registrar</button>
+                </li>
+            </ul>
+        </form>
+        <div id="mensaje"></div>
+
+        <div id="listaClientes">
+            <h3>Clientes y Proveedores Registrados:</h3>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

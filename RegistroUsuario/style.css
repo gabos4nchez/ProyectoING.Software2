@@ -1,0 +1,115 @@
+
+body {
+    background-color: red;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Ampliar un poco para que los campos tengan más espacio */
+    border: 2px solid #dcdcdc;
+}
+
+h2 {
+    text-align: center;
+    color: #b22222;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-list li {
+    margin-bottom: 20px; /* Espacio uniforme entre filas */
+    display: flex;
+    flex-direction: column; /* Asegura que label y input estén en columna */
+    align-items: flex-start; /* Alinea el label y el input al inicio */
+}
+
+label {
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 5px; /* Espacio entre label e input */
+    font-size: 14px;
+}
+
+input, select, button {
+    width: calc(100% - 20px); /* Asegura que todos los inputs tengan el mismo ancho */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+input:focus, select:focus {
+    border-color: #b22222;
+    outline: none;
+    box-shadow: 0 0 5px rgba(178, 34, 34, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b22222;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #800000;
+}
+
+#mensaje {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+#listaClientes {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#listaClientes h3 {
+    margin-bottom: 10px;
+    color: #4d4d4d;
+}
+
+#listaClientes p {
+    margin: 5px 0;
+    font-size: 14px;
+}
