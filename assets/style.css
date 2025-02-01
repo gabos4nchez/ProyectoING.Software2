@@ -31,10 +31,17 @@ h1, h2, h3{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.presentacion{
+.presentacionVertical{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.presentacionHorizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -96,3 +103,58 @@ p.descripcion{
 .stars label:hover ~ label {
     color: #f5a623;
 }
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.anadir{
+    padding: 7px 13px;
+    background-color: transparent;
+    border: 2px solid green;
+    color: green;
+    border-radius: 5px;
+    font: bold 1.2em 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.anadir:hover{
+    background-color: green;
+    color: white;
+}
+
+.detalles{
+    padding: 7px 13px;
+    background-color: transparent;
+    border: 2px solid #0968af;
+    color: #0968af;
+    border-radius: 5px;
+    font: bold 1.2em 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.detalles:hover{
+    background-color: #0968af;
+    color: white;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito>ul{
+    list-style: none;
+    padding: 0;
+    max-height: 220px;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+

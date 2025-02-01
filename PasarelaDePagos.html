@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1> <span>My</span><span class="cursive">Careful</span> - Pasarela de pagos</h1>
+    </header>
+    <main class="presentacionHorizontal">
+        <section style=" border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); padding-left: 5px; padding-bottom: 5px;">
+            <h2>Productos</h2>
+            <div id="productos" class="productos">
+                <div class="producto">
+                    <span>Producto 1 - $10.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 1', 10000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+                <div class="producto">
+                    <span>Producto 2 - $15.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 2', 15000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+                <div class="producto">
+                    <span>Producto 3 - $30.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 3', 30000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+                <div class="producto">
+                    <span>Producto 4 - $35.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 4', 35000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+                <div class="producto">
+                    <span>Producto 5 - $40.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 5', 40000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+                <div class="producto">
+                    <span>Producto 6 - $45.000</span>
+                    <button class="anadir" onclick="agregarAlCarrito('Producto 6', 45000)">+</button>
+                    <a class="detalles" href="InformacionDetallada.html">Detalles</a>
+                </div>
+            </div>
+        </section>
+        <section style=" border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); padding-left: 5px; padding-bottom: 5px; height: 414px; width: 300px;">
+            <h2>Carrito de compras</h2>
+            <div id="carrito" class="carrito">
+                <ul id="lista-carrito"></ul>
+                <p>Total: $<span id="total">0</span></p>
+                <button onclick="realizarPago()" class="anadir">Pagar con PSE</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script>
+        let carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            let listaCarrito = document.getElementById('lista-carrito');
+            listaCarrito.innerHTML = '';
+            carrito.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                listaCarrito.appendChild(li);
+            });
+            document.getElementById('total').textContent = total;
+        }
+
+        function realizarPago() {
+            alert('Redirigiendo a PSE para el pago...');
+            window.location.href = 'https://www.pse.com.co/';
+        }
+    </script>
+</body>
+</html>
