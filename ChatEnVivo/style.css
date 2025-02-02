@@ -1,0 +1,77 @@
+/* Estilo básico para el contenedor del chat */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal del chat */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de los mensajes */
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mensajes del usuario y del bot */
+.message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.cliente {
+    background-color: #dfefff;
+    align-self: flex-start;
+}
+
+.proveedor {
+    background-color: #ffebc4;
+    align-self: flex-end;
+}
+
+/* Contenedor para el campo de entrada y el botón */
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Estilo del input y botón */
+.message-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.send-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #45a049;
+}
