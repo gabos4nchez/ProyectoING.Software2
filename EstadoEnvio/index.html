@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seguimiento de Entrega</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Seguimiento de Entrega</h1>
+
+    <label for="product-select">Selecciona un producto:</label>
+    <select id="product-select">
+        <option value="camiseta">Camiseta</option>
+        <option value="pantalon">Pantalón</option>
+        <option value="zapatos">Zapatos</option>
+    </select>
+
+    <div id="status-container">
+        <div class="status-step active" id="packing">
+            <div class="status-icon"></div>
+            <div class="status-text">Empacado</div>
+        </div>
+        <div class="status-step" id="shipping">
+            <div class="status-icon"></div>
+            <div class="status-text">En camino</div>
+        </div>
+        <div class="status-step" id="delivered">
+            <div class="status-icon">✅</div>
+            <div class="status-text">Entregado</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
